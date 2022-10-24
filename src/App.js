@@ -1,23 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import { signInWithGoogle } from "./Firebase";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <button onClick={signInWithGoogle}>Sign in with Goolgle</button>
+      <h1>Welcome To My Website Mr. {localStorage.getItem("name")}</h1>
+      {/* <h1>{localStorage.getItem("email")}</h1>
+      <img src={localStorage.getItem("photo")} alt="profile" /> */}
     </div>
   );
 }
